@@ -24,19 +24,13 @@ def weeklyQuery(conn):
 
     rows = cur.fetchall()
 
-    for row in rows:
-        #print(row)
-        print(row[0], end=" ")
-        print(row[1], end=" ")
-        print(row[2])
-
     # Create the csv file
     with open('applicants.csv', 'w', newline='') as f_handle:
         writer = csv.writer(f_handle)
         # Add the header/column names
         header = ['count', 'week', 'workflow_state']
         writer.writerow(header)
-        # Iterate over `data`  and  write to the csv file
+        # Iterate over data  and  write to the csv file
         for row in rows:
             writer.writerow(row)
 
