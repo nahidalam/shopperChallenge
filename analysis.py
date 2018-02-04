@@ -41,7 +41,6 @@ def main():
     # create a database connection
     conn = create_connection(database)
     with conn:
-        print("Query all applicants")
         weeklyQuery(conn)
 
 
