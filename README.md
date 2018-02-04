@@ -10,4 +10,4 @@ The server will be up at localhost:8080
 
 ### Part 2:
 
-$python analysis.py
+`$python analysis.py`
