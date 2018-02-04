@@ -11,3 +11,5 @@ The server will be up at localhost:8080
 ### Part 2:
 
 `$python analysis.py`
+
+Result will be stored at `applicants.csv`
