@@ -2,11 +2,13 @@
 var shopper_app_routes = function(app) {
 
 	app.get('/apply', function(req, res) {
-		res.render('application');
+		//res.render('application');
+		res.render('submitted');
 	});
 
 	app.get('/confirm', function(req, res) {
-		res.render('background');
+		//res.render('background');
+		res.render('application');
 	});
 
 	app.post('/shopper', function(req, res) {
@@ -22,7 +24,8 @@ var shopper_app_routes = function(app) {
 				req.session.email = req.body.email;
 				req.session.phone = req.body.phone;
 				req.session.zipcode = req.body.zipcode;
-				res.render('submitted');
+				//res.render('submitted');
+				res.render('background');
 	});
 
 	app.get('/shopper', function(req, res) {
