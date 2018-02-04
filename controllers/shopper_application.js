@@ -5,7 +5,7 @@ var shopper_app_routes = function(app) {
 		res.render('application');
 	});
 
-	app.get('/background', function(req, res) {
+	app.get('/confirm', function(req, res) {
 		res.render('background');
 	});
 
