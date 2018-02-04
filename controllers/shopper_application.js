@@ -22,11 +22,12 @@ var shopper_app_routes = function(app) {
 				req.session.email = req.body.email;
 				req.session.phone = req.body.phone;
 				req.session.zipcode = req.body.zipcode;
-				res.render('confirm_update');
+				res.render('submitted');
 	});
 
 	app.get('/shopper', function(req, res) {
 
+		//read from session
 		var shopper = {
 			firstname:req.session.firstname,
 			lastname: req.session.lastname,
@@ -35,6 +36,7 @@ var shopper_app_routes = function(app) {
 			zipcode: req.session.zipcode
 		}
 
+		//show saved session data
 		res.render('edit_application', { applicant: shopper});
 	});
 }
